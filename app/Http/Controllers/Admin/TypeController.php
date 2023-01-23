@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TypeController extends Controller
 {
@@ -69,9 +70,18 @@ class TypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Type $type)
     {
-        //
+        $val_data = $request->validate([
+            'name' => 'required|unique:types',
+        ]
+    );
+        $slug = Str::slug($val_data['name']);
+        $val_data['slug'] = $slug;
+
+        $type->update($val_data);
+
+        return redirect()->back()->with('message', "Type  $type->name it was updated successfully");
     }
 
     /**

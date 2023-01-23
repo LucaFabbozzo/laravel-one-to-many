@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container w-75 m-auto text-center pt-2 text">
+        @if (session('message'))
+            <div class="alert alert-success" role="alert">
+                {{session('message')}}
+             </div>
+         @endif
         <table class="table table-striped">
             <thead>
                 <tr>
