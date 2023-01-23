@@ -146,4 +146,8 @@ class ProjectController extends Controller
 
         return view('admin.projects.index', compact('projects', 'direction'));
     }
+
+    public function types_project() {
+        return 'ciao';
+    }
 }

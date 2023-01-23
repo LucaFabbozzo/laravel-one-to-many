@@ -24,6 +24,7 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function(){
         Route::get('/', [DashBoardController::class, 'index'])->name('dashboard');
+        Route::get('projects/project-type', [ProjectController::class, 'types_project'])->name('types_project');
         Route::resource('projects', ProjectController::class);
         Route::get('projects/orderby/{column}/{direction}', [ProjectController::class, 'orderby'])->name('projects.orderby');
     });
