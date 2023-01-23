@@ -25,6 +25,17 @@
                     </div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="client_name" class="form-label">Type</label>
+                <select class="form-select" name="type_id">
+                    <option value="" selected>Select a type</option>
+                    @foreach ($types as $type)
+                        <option
+                        @if ($type->id == old('type_id', $project->type?->id)) selected @endif
+                        value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
              <div class="mb-3">
                 <label for="client_name" class="form-label">Client Name</label>
                 <input type="text" class="form-control @error('client_name') is-invalid @enderror" name="client_name" id="client_name" value="{{ old('client_name', $project->client_name) }}"  placeholder="client name">
