@@ -12,18 +12,18 @@
             <tbody>
                 @forelse ($types as $type )
                 <tr>
-                    <td>{{ $type->name }}</td>
+                    <td class="fs-5">{{ $type->name }}</td>
                     <td>
                         <ul>
                             @foreach ($type->types as $project )
-                                <li class="list-unstyled"><a href="{{ route('admin.projects.show' , $project) }}">{{ $project->name }}</a></li>
+                                <li class="list-unstyled"><a class="text-dark" href="{{ route('admin.projects.show' , $project) }}">{{ $project->name }}</a></li>
                             @endforeach
                         </ul>
                     </td>
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="4"><h3>Nessun Risulatato</h3></td>
+                    <td colspan="4"><h3>No result</h3></td>
                 </tr>
                 @endforelse
             </tbody>

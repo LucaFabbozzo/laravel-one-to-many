@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ $project->id }}</td>
                     <td><img style="width: 60px" src="{{asset('storage/'. $project->cover_image)}}" alt="{{$project->image_original_name}}"></td>
-                    <td>{{ $project->name }} <span class="badge text-bg-info">{{ $project->type->name }}</span></th>
+                    <td>{{ $project->name }} <span class="badge text-bg-dark">{{ $project->type->name }}</span></th>
                     <td>{{ $project->client_name }}</td>
                     <td>{!! $project->summary !!}</td>
                     <td><a class="btn btn-outline-primary" href="{{route('admin.projects.show', $project)}}"><i class="fa-solid fa-eye"></i></a></td>

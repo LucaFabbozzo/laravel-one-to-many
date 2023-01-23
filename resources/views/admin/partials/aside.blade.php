@@ -6,7 +6,7 @@
                 <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.projects.create') }}"><i class="fa-solid fa-plus d-inline me-1"></i>Add</a></li>
             </ul>
         </li>
-         <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types_project') }}"><i class="fa-solid fa-flag-checkered me-1"></i>Projects Type</a></li>
-        <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types.index') }}"><i class="fa-solid fa-code me-1"></i>Type</a></li>
+         <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types_project') }}"><i class="fa-solid fa-flag-checkered d-inline me-1"></i>Projects Type</a></li>
+        <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types.index') }}"><i class="fa-solid fa-code d-inline me-1"></i>Type</a></li>
     </ul>
 </nav>
