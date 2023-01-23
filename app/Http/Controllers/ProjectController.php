@@ -136,7 +136,7 @@ class ProjectController extends Controller
         }
         $project->delete();
         // con with() passo i dati in sessione alla vista
-        return redirect()->route('admin.projects.index')->with('deleted', "The comic $project->name was succesfully deleted");
+        return redirect()->route('admin.projects.index')->with('deleted', "The $project->name was succesfully deleted");
     }
 
     public function orderby($column, $direction)

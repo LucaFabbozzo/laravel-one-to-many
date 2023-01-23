@@ -3,6 +3,11 @@
 @section('content')
     <div class="container w-100 m-auto pt-3 p-4">
             <h1 class="fs-5 text-uppercase">My Projects List</h1>
+          @if (session('deleted'))
+             <div class="alert alert-success" role="alert">
+                {{session('deleted')}}
+             </div>
+          @endif
             <form class="py-2" action="{{route('admin.projects.index')}}" method="GET">
                 @csrf
                 <input class="form-control d-inline-block w-50" type="text" name="search" placeholder="Find something into my projects">
