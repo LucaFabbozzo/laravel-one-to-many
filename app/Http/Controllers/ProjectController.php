@@ -148,6 +148,9 @@ class ProjectController extends Controller
     }
 
     public function types_project() {
-        return 'ciao';
+
+        $types = Type::all();
+
+        return view('admin.projects.list_type_project', compact('types'));
     }
 }
