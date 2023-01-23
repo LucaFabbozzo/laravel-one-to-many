@@ -1,0 +1,65 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f3f2f2;
+}
+
+main {
+    height: calc(100vh - 82px);
+    overflow-y: auto;
+}
+
+.avatar {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding-bottom: 4px;
+}
+
+.box {
+    border: 1px solid #bdbdbd;
+}
+
+
+
+
+.pag-box {
+    .pagination {
+        .page-item {
+            margin: 0 2px;
+            &.active .page-link {
+                background-color: #747474;
+            }
+            .page-link {
+                border: none;
+                background-color: #313131;
+                color: white;
+                border-radius: 7px;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+.pb-page {
+    color: #313131;
+    border-radius: 10px;
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+
+.main-wrapper {
+    height: calc(100vh - 82px);
+}
+
+.lf-links {
+    text-decoration: none;
+    font-size: 1.2rem;
+   &:hover {
+    color: #aeaeae;
+   }
+
+}
