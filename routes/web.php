@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashBoardController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -27,6 +28,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('projects/project-type', [ProjectController::class, 'types_project'])->name('types_project');
         Route::resource('projects', ProjectController::class);
         Route::get('projects/orderby/{column}/{direction}', [ProjectController::class, 'orderby'])->name('projects.orderby');
+        Route::resource('types', TypeController::class)->except(['show', 'create', 'edit']);
     });
 
 

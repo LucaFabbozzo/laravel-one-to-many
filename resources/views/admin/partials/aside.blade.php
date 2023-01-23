@@ -7,5 +7,6 @@
             </ul>
         </li>
          <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types_project') }}"><i class="fa-solid fa-flag-checkered me-1"></i>Projects Type</a></li>
+        <li class="pb-1"><a class="text-light lf-links" href="{{ route('admin.types.index') }}"><i class="fa-solid fa-code me-1"></i>Type</a></li>
     </ul>
 </nav>
